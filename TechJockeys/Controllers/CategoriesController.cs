@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TechJockeys.Models;
 
 namespace TechJockeys.Controllers
 {
@@ -6,7 +7,9 @@ namespace TechJockeys.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var categories = new List<Category>();
+
+            return View(categories);
         }
 
         public IActionResult Create()
