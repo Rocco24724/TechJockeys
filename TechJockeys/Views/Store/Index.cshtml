@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Category>
+    
+@{
+    // sets title of page to "Store"
+    ViewData["Title"] = "Store";
+}
+
+<h1>Shop / Build Your Custom Computer </h1>
+
+<ul>
+    @foreach (var category in Model)
+    {
+        <li>
+            <a asp-action="ByCategory" asp-controller="Store" asp-route-id="@category.CategoryId">
+                @category.Name
+            </a>
+        </li>
+    }
+</ul>
