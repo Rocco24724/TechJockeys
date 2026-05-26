@@ -1,4 +1,4 @@
-@model IEnumerable<TechJockeys.Models.Category>
+﻿@model IEnumerable<TechJockeys.Models.Category>
 
 @{
     ViewData["Title"] = "Index";
@@ -22,7 +22,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(model => item.Name)
+                @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.CategoryId">Edit</a> |

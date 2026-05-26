@@ -7,8 +7,10 @@ namespace TechJockeys.Controllers
     {
         public IActionResult Index()
         {
+            // create empty Category list so view doesn't crash
             var categories = new List<Category>();
 
+            // pass empty list to view
             return View(categories);
         }
 
